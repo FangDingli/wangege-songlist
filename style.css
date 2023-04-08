@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  background-image: url(https://s2.loli.net/2023/04/07/fHkm9Frvhd8tJNQ.webp);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  opacity: 0.8;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  animation: spin 20s infinite linear;
+}
+
+.header p {
+  font-size: 20px;
+}
+
+.container {
+  width: 80%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0 #dddddd;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  /*align-items: center;*/
+  margin-top: 20px;
+  opacity: 0.8;
+  overflow-x: hidden;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#category-select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+#search-input {
+  width: 45%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+#random_Song {
+  width: auto;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  white-space: nowrap;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#random_Song:hover {
+  background-color: #99cce4;
+  color: white;
+}
+
+#table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+.footer p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
