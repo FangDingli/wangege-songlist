@@ -7,6 +7,9 @@
     content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <title>挽歌歌_の歌单</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
+  <script>
+    var allSonglist = []
+  </script>
   <!-- https://gitlab.com/catamphetamine/read-excel-file -->
   <script src="./read-excel-file.min.js"></script>
   <script src="./script.js"></script>
@@ -64,7 +67,7 @@
   fetch('/songlist.xlsx').then(res => res.blob()).then(blob => readXlsxFile(blob)).then(rows => {
     document.getElementById('song-table-head').innerHTML = `<tr><th>${rows[0][0]}</th><th>${rows[0][1]}</th><th>${rows[0][2]}</th><th>${rows[0][3]}</th></tr bgcolor="">`
     rows.shift()
-    var allSonglist = rows
+    allSonglist = rows
     let html = ''
     let selectOpts = []
     let selectHtml = '<option value="全部" selected="selected">全部</option>'

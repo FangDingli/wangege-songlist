@@ -136,7 +136,7 @@ function betterCopySongName(mode, event) {
       songName = event.target.innerText
     }
   } else {
-    songName = allSonglist[Math.floor(Math.random() * allSonglist.length)]
+    songName = allSonglist[Math.floor(Math.random() * allSonglist.length)][0]
   }
 
   // 空歌曲判断
