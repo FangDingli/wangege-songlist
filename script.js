@@ -133,7 +133,12 @@ function betterCopySongName(mode, event) {
   if (mode === 1) {
     // 复制歌名
     if (event.target.cellIndex == 0) {
-      songName = event.target.innerText
+      let str = event.target.innerText
+      if (str[0] === '【') {
+        const index = str.indexOf('】')
+        str = str.substring(index + 1)
+      }
+      songName = str
     }
   } else {
     songName = allSonglist[Math.floor(Math.random() * allSonglist.length)][0]
